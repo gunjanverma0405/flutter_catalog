@@ -5,7 +5,7 @@ import 'package:flutter_catalog/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -41,12 +41,14 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark, //this is overriding primaryswatch
         //primarySwatch: Colors.red,
       ),
+      debugShowCheckedModeBanner: false,
       //initialRoute: "/home", //by default "/"
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         // "/" -> this means home only so remove the home otherwise this will throw error
-        "/": (context) => LoginPage(),
-        MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
       },
     );
   }
