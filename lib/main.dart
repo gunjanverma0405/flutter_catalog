@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -31,16 +32,24 @@ class MyApp extends StatelessWidget {
       //debugShowCheckedModeBanner: false,
       //home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        //primaryTextTheme: GoogleFonts.latoTextTheme(), Iska ek baar dekhna ye kya hota hai
-      ),
-      darkTheme: ThemeData(
-        //this will work when themeMode is dark
-        brightness: Brightness.dark, //this is overriding primaryswatch
-        //primarySwatch: Colors.red,
-      ),
+      theme: MyTheme.lightTheme,
+      //   ThemeData(
+      //   primarySwatch: Colors.deepPurple,
+      //   fontFamily: GoogleFonts.lato().fontFamily,
+      //   appBarTheme: const AppBarTheme(
+      //     color: Colors.white,
+      //     elevation: 0,
+      //     iconTheme: IconThemeData(color: Colors.black),
+      //     titleTextStyle: TextStyle(color: Colors.black, fontSize: 17),
+      //   ),
+      //   //primaryTextTheme: GoogleFonts.latoTextTheme(), Iska ek baar dekhna ye kya hota hai
+      // ),
+      darkTheme: MyTheme.darkTheme,
+      // ThemeData(
+      //   //this will work when themeMode is dark
+      //   brightness: Brightness.dark, //this is overriding primaryswatch
+      //   //primarySwatch: Colors.red,
+      // ),
       debugShowCheckedModeBanner: false,
       //initialRoute: "/home", //by default "/"
       initialRoute: MyRoutes.homeRoute,
