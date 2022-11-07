@@ -21,9 +21,30 @@ class HomePage extends StatelessWidget {
           // ),
         ),
       ),
-      body: Center(
-        child: Text("$name: Day $days"),
+      body: Container(
+        width: 100,
+        height: 100,
+        color: Colors.green,
       ),
+      // Container(
+      //   constraints: const BoxConstraints(
+      //     maxHeight: 200,
+      //     minHeight: 70,
+      //     minWidth: 70,
+      //     maxWidth: 200,
+      //   ),
+      //   height: 300,
+      //   width: 300,
+      //   color: Colors.green,
+      //   child: Container(
+      //     height: 70,
+      //     width: 70,
+      //     color: Colors.red,
+      //   ),
+      // ),
+      // Center(
+      //   child: Text("$name: Day $days"),
+      // ),
       drawer: const MyDrawer(),
     );
   }
