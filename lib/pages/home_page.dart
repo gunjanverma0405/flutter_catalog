@@ -21,11 +21,14 @@ class HomePage extends StatelessWidget {
           // ),
         ),
       ),
-      body: Container(
-        width: 100,
-        height: 100,
-        color: Colors.green,
+      body: Center(
+        child: Text(context.runtimeType.toString()),
       ),
+      // Container(
+      //   width: 100,
+      //   height: 100,
+      //   color: Colors.green,
+      // ),
       // Container(
       //   constraints: const BoxConstraints(
       //     maxHeight: 200,
@@ -41,9 +44,6 @@ class HomePage extends StatelessWidget {
       //     width: 70,
       //     color: Colors.red,
       //   ),
-      // ),
-      // Center(
-      //   child: Text("$name: Day $days"),
       // ),
       drawer: const MyDrawer(),
     );
